@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="subjects.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;700&display=swap" />
+    <title>Your Website</title>
+    <style>
+        /* Style the sidebar */
+  
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="head">
+        <div class="logo"> <a href="https://www.tbceducation.ge/"><img src="tbc.svg" alt="tbc"></a></div>
+        <div class="subject">წლევანდელი გაკვეთილები</div>
+        <div class="menu-icon" onclick="toggleSidebar()">
+            <span class="material-symbols-outlined">menu</span>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html">home</a></li>
+            <hr>
+
+            <li><a href="news.html">სიახლეები</a></li>
+            <li><a href="about.html">შესახებ</a></li>
+            
+            <li><a href="davalebebi-matematika.html">დავალებები</a></li>
+            <hr>
+
+            <li><a href="#">ნიშნები</a></li>
+            <li><a href="#">დასწრება</a></li>
+            <li><a href="#">პროფილი</a></li>
+        </ul>
+        <hr>
+        <ul>
+            <li><a href="#">პარამეტრები</a></li>
+            <li><a href="#">გამოსვლა</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-container">
+        <div class="main-container">
+            <div class="subject-box math">
+                <div class="subject-label">მათემატიკა</div>
+                <hr>
+                <div class="teacher">ბატონი გიორგი ჭელიძე</div>
+                <div class="score">9.5</div>
+                <div class="attendance">მაღალი დასწრება</div>
+                <div class="assignment-link"><a href="davalebebi-matematika.html" style="text-decoration: none; color: white; cursor: pointer;">!</a></div>
+            </div>
+            <div class="subject-box physics">
+                <div class="subject-label">ფიზიკა</div>
+                <hr>
+                <div class="teacher">ქალბატონი ნინო საბიაშვილი </div>
+                <div class="score">5</div>
+                <div class="attendance">აცდენს</div>
+                <!-- <div class="assignment-link">!</div> -->
+            </div>
+            <div class="subject-box music">
+                <div class="subject-label">მუსიკა</div>
+                <hr>
+                <div class="teacher">ბატონი ნიკა ნოზაძე</div>
+                <div class="score">9</div>
+                <div class="attendance">საშუალო დასწრება</div>
+                <!-- <div class="assignment-link">!</div> -->
+            </div>
+            <div class="subject-box art">
+                <div class="subject-label">ხელოვნება</div>
+                <hr>
+                <div class="teacher">ქალბატონი მარინე ჩუთლაშვილი</div>
+                <div class="score">8</div>
+                <div class="attendance">მაღალი დასწრება</div>
+                <!-- <div class="assignment-link">!</div> -->
+            </div>
+            <div class="subject-box chemistry">
+                <div class="subject-label">ქიმია</div>
+                <hr>
+                <div class="teacher">ბატონი მერაბი შუბითიძე</div>
+                <div class="score">9</div>
+                <div class="attendance">მაღალი დასწრება</div>
+                <div class="assignment-link"><a href="davalebebi-qim.html" style="text-decoration: none; color: white; cursor: pointer;">!</a></div>
+            </div>
+            <div class="subject-box geography">
+                <div class="subject-label">გეოგრაფია</div>
+                <hr>
+                <div class="teacher">ქალბატონი ლილი ღლონტი</div>
+                <div class="score">8</div>
+                <div class="attendance">საშუალო დასწრება</div>
+                <div class="assignment-link"><a href="davalebebi-geo.html" style="text-decoration: none; color: white; cursor: pointer;">!</a></div>
+            </div>
+            <div class="subject-box history">
+                <div class="subject-label">ისრორია</div>
+                <hr>
+                <div class="teacher">ქალბატონი მარინე გაბროშბილი</div>
+                <div class="score">10</div>
+                <div class="attendance">მაღალი დასწრება</div>
+                <!-- <div class="assignment-link">!</div> -->
+            </div>
+            <div class="subject-box pe">
+                <div class="subject-label">ფიზკულტურა</div>
+                <hr>
+                <div class="teacher">ბატონი ვახო გაფრინდაშვილი</div>
+                <div class="score">0</div>
+                <div class="attendance">მაღალი დასწრება</div>
+                <div class="assignment-link"><a href="davalebebi-pe.html" style="text-decoration: none; color: white; cursor: pointer;">!</a></div>
+            </div>
+            <div class="subject-box english">
+                <div class="subject-label">ინგლისური</div>
+                <hr>
+                <div class="teacher">ქალბატონი ლალი ცომაია</div>
+                <div class="score">9</div>
+                <div class="attendance">მაღალი დასწრება</div>
+                <div class="assignment-link"><a href="davalebebi-ing.html" style="text-decoration: none; color: white; cursor: pointer;">!</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay for Sidebar -->
+    <div class="overlay" id="overlay" onclick="toggleSidebar()">
+        <div class="overlay-content">
+      <ul>
+            <li><a href="index.html">Home</a></li>
+            <hr>
+
+            <li><a href="index.html">შესახებ</a></li>
+            <li><a href="news.html">სიახლეები</a></li>
+            <hr>
+
+            <li><a href="davalebebi-matematika.html">დავალებები</a></li>
+            <li><a href="#">პროფილი</a></li>
+        </ul>
+        <hr>
+        <ul>
+            <li><a href="#">პარამეტრები</a></li>
+            <li><a href="#">გამოსვლა</a></li>
+        </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('show');
+            document.getElementById('overlay').classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

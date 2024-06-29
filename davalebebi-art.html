@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="davalebebi.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 48
+        }
+        </style>
+    <title>Your Website</title>
+</head>
+<body>
+    <header class="head">
+        <div class="menu-icon">
+            <span class="material-symbols-outlined">menu</span>
+        </div>
+        <div class="logo"> <a href="https://www.tbceducation.ge/"><img src="tbc.svg" alt="tbc"></a></div>
+        <div class="subject">ხელოვნება</div>
+    </header>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">სიახლეები</a></li>
+            <li><a href="subjects.html">საგნები</a></li>
+            <li><a href="about.html">შესახებ</a></li>
+            <hr>
+            <li><a href="davalebebi-matematika.html">მათემატიკა</a></li>
+            <li><a href="davalebebi-fizika.html">ფიზიკა</a></li>
+            <li><a href="davalebebi-geo.html">გეოგრაფია</a></li>
+            <li><a href="davalebebi-qim.html">ქიმია</a></li>
+            <li><a href="davalebebi-ing.html">ინგლისური</a></li>
+            <li><a href="davalebebi-his.html">ისტორია</a></li>
+            <li><a href="davalebebi-mus.html">მუსიკა</a></li>
+            <li><a href="davalebebi-art.html">ხელოვნება</a></li>
+            <li><a href="davalebebi-pe.html">ფისკულტურა</a></li>
+
+        </ul>
+    </div>
+
+    <div class="flex-container">
+        <div class="main-container">
+            <div class="img"><img src="art.jpeg" alt="Placeholder Image"></div>
+          <div class="text" ><p><b>მოგესალმებით მათემათიკის classroom-ში. გთხოვთ გაევცანით წესებს</b>  <br> <br> <b>პირველი: </b>არანაირი უხეში და უცენზური მიმართვა სასაუბრო ჩათში. <br> <br><b>მეორე:</b> აუცილებელია შესრულდეს და მოცემულ "deadline"-ზე მოხდეს დავალებების ჩაბარება.</b> <br><br> <b>მესამე:</b> შეიკავეთ თავი ჩათში პირადი საუბრებისგან. გამოიყენეთ ეს ჩათი მხოლოდ დავალებაზე ორიენტირებული კიტხვებისთვის</p></div>
+            <div class="list">
+                <a href="#"><li>გადახედეთ წიგნის 120 გვერწე მოცემულ თეორიულ ნაწილს და გააკეთეთ მოცემული დავალებელი </li></a>
+                <a href="#"><li> გააკეთეთ მოცემული დავალებელი</li></a>
+                <a href="#"><li>მოუსმინეთ ამ ვიდეოს </li></a>
+                <a href="#"><li>გააკეთეთ მოცემული დავალებელი</li></a>
+                <a href="#"><li>კომპლექსური დავალება </li></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="about.html">About</a></li>
+            <hr>
+            <li><a href="davalebebi-matematika.html">მათემატიკა</a></li>
+            <li><a href="davalebebi-fizika.html">ფიზიკა</a></li>
+            <li><a href="davalebebi-geo.html">გეოგრაფია</a></li>
+            <li><a href="davalebebi-qim.html">ქიმია</a></li>
+            <li><a href="davalebebi-ing.html">ინგლისური</a></li>
+            <li><a href="davalebebi-his.html">ისტორია</a></li>
+            <li><a href="davalebebi-mus.html">მუსიკა</a></li>
+            <li><a href="davalebebi-art.html">ხელოვნება</a></li>
+            <li><a href="davalebebi-pe.html">ფისკულტურა</a></li>
+
+
+        </ul>
+    </div>
+
+    <script>
+        // Get the menu icon and sidebar elements
+        const menuIcon = document.querySelector('.menu-icon');
+        const sidebar = document.querySelector('.sidebar');
+        const overlay = document.querySelector('.overlay');
+
+        // Add an event listener to the menu icon
+        menuIcon.addEventListener('click', () => {
+            // Toggle the overlay and sidebar visibility
+            sidebar.classList.toggle('overlay');
+            overlay.classList.toggle('show');
+        });
+
+        // Add an event listener to the overlay to close the sidebar
+        overlay.addEventListener('click', () => {
+            sidebar.classList.remove('overlay');
+            overlay.classList.remove('show');
+        });
+    </script>
+</body>
+</html>

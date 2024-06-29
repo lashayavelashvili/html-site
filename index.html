@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />  
+    <style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 48
+        }
+        </style>
+</head>
+<body>
+
+<header>
+    <div class="overlay" id="overlayNav">
+        <a href="javascript:void(0);" class="closebtn" onclick="toggleOverlay()">
+            <p style="text-decoration: none;" none;>X</p>
+        </a>
+        <a href="about.html">შესახებ</a>
+        <a href="index.html">Home</a>
+        <a href="subjects.html">საგნები</a>
+        <a href="davalebebi-matematika.html">დავალებები</a>
+        <a href="news.html">სიახლეები</a>
+    </div>
+    <div class="topnav">
+        <div class="logo"> <a href="https://www.tbceducation.ge/"><img src="tbc.svg" alt="tbc"></a></div>
+        <div class="nav-links">
+            <a href="about.html">შესახებ</a>
+            <a href="index.html">Home</a>
+            <a href="news.html">სიახლეები</a>
+            <a href="subjects.html">საგნები</a>
+            <a href="davalebebi-matematika.html">დავალებები</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="toggleOverlay()">
+            <span class="material-symbols-outlined">
+                menu
+                </span>
+        </a>
+    </div>
+    <h3>მოგესალმებით, ძვირფასო მოსწავლე</h3>
+    <button class="get-started">დაწყება<span class="arrow">→</span></button>
+</header>
+
+<div class="flex-container">
+    <div class="main-container">
+        <div class="assignments">
+             <b style="font-size: 50px;">დავალებები </b>
+            <div class="button">
+               <a href="davalebebi-matematika.html"> <button onclick=" ">ნახე დავალებები</button></a>
+            </div>
+        </div>
+        
+        <div class="subjects">
+            <b style="font-size: 50px; ">საგნები </b>         
+               <div class="button">
+                <a href="subjects.html"><button onclick="location.href='#'">შეამოწმე ნიშნები</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelector('.get-started').addEventListener('click', function() {
+        document.querySelector('.main-container').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    function toggleOverlay() {
+        const overlayNav = document.getElementById("overlayNav");
+        overlayNav.classList.toggle("open");
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3); /* Adjust gradient colors */
+    color: #333;
+    line-height: 1.6;
+}
+.logo{
+    width: 150px;
+    height: auto;
+    margin-top: 6px;
+}
+/* Header styles */
+.head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #343a40; /* Darker header color */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.head .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.head .subject {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: none;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+    font-size: 36px;
+    color: #fff;
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 70px);
+    background-color: #4d4d4d; /* Darker sidebar color */
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 900;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: 500;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #2c3e50;
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.sidebar hr {
+    border-color: #2c3e50;
+    margin: 15px 0;
+}
+
+/* Main content styles */
+.flex-container {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 70px;
+}
+
+.main-container {
+    margin-top: 20px;
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.subject-box {
+    position: relative;
+    width: calc(33.33% - 20px);
+    height: 220px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #333;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc; /* HR line under the title */
+}
+
+.subject-box:hover {
+    transform: translateY(-5px);
+}
+
+.math { background-color: #e6b800; } /* Darker yellow */
+.physics { background-color: #4dd0e1; } /* Light cyan */
+.music { background-color: #ff5c8d; } /* Darker pink */
+.art { background-color: #7a67ee; } /* Light indigo */
+.chemistry { background-color: #ff8c66; } /* Light salmon */
+.geography { background-color: #6fbf73; } /* Light green */
+.history { background-color: #ff5733; } /* Light red */
+.pe { background-color: #3a7bd5; } /* Darker blue */
+.english { background-color: #6fb1fc; } /* Light sky blue */
+
+.subject-label {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.teacher {
+    color: black;
+    font-size: 18px;
+    margin-bottom: 60px;
+}
+
+.score {
+    font-size: 18px;
+    color: #333;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #fff;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 2px solid #333;
+}
+
+.attendance {
+    font-size: 17px;
+    color: black;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.assignment-link {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: #ff5733; /* Light red */
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.assignment-link:hover {
+    background-color: #ff4500; /* Darker orange */
+}
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-top: 2px dashed #ccc;
+    width: 100%;
+}
+
+/* Overlay styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 950;
+    opacity: 0;
+    transition: left 0.3s ease, opacity 0.3s ease;
+}
+
+.overlay.show {
+    left: 0;
+    opacity: 1;
+}
+
+.overlay-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #4d4d4d; /* Darker overlay background */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0 5px 5px 0;
+}
+
+.overlay ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.overlay ul li {
+    margin-bottom: 15px;
+}
+
+.overlay ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: 500;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.overlay ul li a:hover {
+    background-color: #2c3e50;
+    color: #fff;
+    transform: translateX(5px);
+}
+
+@media (max-width: 1400px) {
+    .main-container {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .subject-box {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 992px) {
+    .subject-box {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .main-container {
+        margin-left: 50px;
+        width: calc(100% - 50px);
+    }
+
+    .subject-box {
+        width: calc(100% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .head {
+        padding: 0 10px;
+    }
+
+    .head .subject {
+        font-size: 16px;
+    }
+
+    .subject-box {
+        width: 100%;
+        margin: 10px;
+    }
+}
